@@ -6,6 +6,9 @@ project(crypto
     LANGUAGES CXX)
 
 add_executable(crypto
-    main.cpp)
+    main.cpp
+    src/client.cpp
+    src/server.cpp)
 
 target_compile_options(crypto PRIVATE -Isrc/ -Wall -Wextra -g)
+target_link_libraries(crypto sodium)
