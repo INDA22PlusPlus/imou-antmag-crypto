@@ -9,6 +9,7 @@ project(crypto
 
 add_executable(crypto
     main.cpp
+    src/merkle_tree.cpp
     src/client.cpp
     src/server.cpp)
 
@@ -16,4 +17,5 @@ target_link_directories(crypto PRIVATE /usr/local/lib)
 target_include_directories(crypto PRIVATE /usr/local/include)
 target_compile_options(crypto PRIVATE -Isrc/ -Wall -Wextra -g)
 target_link_libraries(crypto boost_system)
+target_link_libraries(crypto boost_filesystem)
 target_link_libraries(crypto sodium)
