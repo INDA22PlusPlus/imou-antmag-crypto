@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 
+set(CMAKE_CXX_STANDARD 17)
+
 project(crypto
     VERSION 1.0
     DESCRIPTION "Crypto Server for KTH assignment"
